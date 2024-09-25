@@ -1,3 +1,9 @@
-công nghệ sử dụng
-thuật toán
-đối với các bài toán sự so sánh giữa 2 thuật toán
+1.công nghệ sử dụng
+pandas,fidfVectorizer,accuracy_score, classification_report,LabelBinarizer
+2.thuật toán
+
+3.đối với các bài toán sự so sánh giữa 2 thuật toán
+So sánh kết quả giữa Bernoulli và Multinomial Naive Bayes:
+Bernoulli Naive Bayes Accuracy: 0.6363636363636364
+Multinomial Naive Bayes Accuracy: 0.6363636363636364
+đều cho ra cùng 1 kết quá 
