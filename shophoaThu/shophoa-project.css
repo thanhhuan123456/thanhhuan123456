@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+i {
+    margin-right:5px;
+    font-size:26px;
+}
+button{
+    cursor: pointer;
+}
+input:focus {
+    outline: none; /* Xóa viền mặc định cho tất cả các ô nhập liệu */
+}
+
+#main-container-div{
+    display: flex;
+}
+#pink-half{
+    background:linear-gradient(to right, #e960db, #ed08d6);
+    color: white;
+   
+}
+
+#text-holder-pink-half{
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 22px;
+    font-family: "Playwrite AU QLD", cursive;
+    animation-name: slide-pink-text-holder;
+    animation-duration: 2s;
+
+}
+
+@keyframes slide-pink-text-holder{
+    from{
+        color: black;
+        position: absolute;
+        right: 0px;
+    }
+    to{
+        position: absolute;
+        right: 65vw;
+    }
+}
+
+#content-holder-white-half{
+    display: flex;
+    flex-direction: column;
+}
+#actual-content-holder-white-half{
+    animation-name: slide-white-holder-content; 
+    animation-duration: 2s;
+}
+@keyframes slide-white-holder-content{
+    from{
+        transform: translateY(600px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+#singup-button{
+    background-color: #ed08d6;
+    color: white;
+    border: none; 
+    margin:18px 0px; 
+}
+#singup-button:hover{
+    background-color: #5c0353;
+}
+
+#login-button{
+    border: 1px solid #ed08d6;
+    background-color: white;
+    color: #ed08d6;
+}
+#login-button:hover{
+    background-color: #e9cae6;
+}
+
+#our-hoa{
+    font-size: 36px;
+    color: #ed08d6;
+}
+.wing{
+    width: 55px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: lightblue;
+    border: none;
+}
+#left-wing{
+    position: relative;
+    top: -18px;
+    left: 15px;
+    transform-origin: right;
+    animation-name:left-wing-flap ;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+#right-wing{
+    position: relative;
+    top: -18px;
+    left: -25px;
+    transform-origin: left;
+    animation-name:right-wing-flap ;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes right-wing-flap{
+    5%{
+        transform: rotate(40deg);    
+    }   
+    15%{
+        transform: rotate(-40deg); 
+    }
+    25%{
+        transform: rotate(40deg);
+    }
+    35%{
+        transform: rotate(-40deg); 
+    }
+    45%{
+        transform: rotate(40deg);
+    }
+    55%{
+        transform: rotate(-40deg); 
+    }
+    65%{
+        transform: rotate(40deg);
+    }
+    75%{
+        transform: rotate(-40deg); 
+    }
+    85%{
+        transform: rotate(40deg);
+    }
+    95%{
+        transform: rotate(-40deg); 
+    }
+}
+
+@keyframes left-wing-flap{
+    5%{
+        transform: rotate(-40deg);    
+    }   
+    15%{
+        transform: rotate(40deg); 
+    }
+    25%{
+        transform: rotate(-40deg);
+    }
+    35%{
+        transform: rotate(40deg); 
+    }
+    45%{
+        transform: rotate(-40deg);
+    }
+    55%{
+        transform: rotate(40deg); 
+    }
+    65%{
+        transform: rotate(-40deg);
+    }
+    75%{
+        transform: rotate(40deg);
+    }
+    85%{
+        transform: rotate(-40deg);
+    }
+    95%{
+        transform: rotate(40deg); 
+    }
+}
+
+#bird-and-wings{
+    animation-name: fly-bird;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly-bird{
+    5%{
+        transform: translateY(-20px);    
+    }   
+    
+    25%{
+        transform: translateY(-40px);
+    }
+    
+    45%{
+        transform: translateY(-60px);
+    }
+    65% {
+        transform: translateY(-80px);
+        opacity: 0.5;
+      
+    }
+    85%{
+        transform: translateY(-1000px);
+        
+    }
+
+}
+
+#loginform-container{
+    position: absolute;
+    top:30px;
+    animation-name: login-slide;
+    animation-duration: 2s;
+    
+}
+@keyframes login-slide{
+    from{
+        left: 0px;
+    }
+    to{
+        left: 64vw;
+    }
+}
+
+#actual-login-form{
+    display: flex;
+}
+
+#loginform-button{
+    height: 46px;
+    border-radius: 30%;
+    width: 70px;
+    border: 1px solid #ed08d6;
+    background-color: white;
+    margin-left: 12px;
+    color: #ed08d6;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    top: -8px;
+    
+}
+#loginform-button:hover{    
+    background-color: #e9cae6;
+
+}
+#bottom-container{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    height: 45px;
+}
+#forgot-password:hover  {
+    border-bottom: 1px solid lightgray  ;
+    cursor: pointer;
+}
+
+.main-div{
+    width: 50%; 
+    height: 96vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-and-signup-button{
+    width: 365px;
+    height: 45px;
+    border-radius: 24px;
+    font-size: 17px;
+    font-family: "Crete Round";
+    align-content: space-between;
+}
+
+
+.login-inputs{
+    height: 38px;
+    width: 220px;
+    border-radius: 4px;
+    padding: 9px;
+    font-size: 17px;
+    border: 1px solid  lightgray;
+}
+
+.login-inputs:focus {
+    border: 1px solid #ed08d6;
+    
+}
+
+@media(min-width:1060px) and (max-width:1600px){
+    #actual-login-form{
+        position: relative;
+        right: 70px;
+    }
+}
+
+@media(min-width:0px) and (max-width:1060px){
+    .login-inputs{
+        display: none;
+    }
+    #forgot-password{
+        display: none;
+    }
+    #loginform-container{
+        left: 260px;
+        top: -8px;   
+    }
+    #content-holder-white-half{
+        position: relative;
+    }
+}
+
+@media(max-width:801px) and (min-width:420px){
+    .main-div{
+        height: 40vh;
+    }
+    #bottom-container{
+        height: 20vh;
+    }
+    #text-holder-pink-half{
+        position: relative;
+        top:-60px;
+    }
+}
+@media(max-width:801px) and (min-width:0px){
+    #main-container-div{
+        flex-direction: column-reverse;
+    }
+    .main-div{
+        height: 48vh;
+        width: 100%;
+    }
+}
+@media(max-width:380spx) and (min-width:0px){
+    .login-and-signup-button{
+        width: 325px;
+    }
+    #loginform-container{
+        left: 260px;
+        top: -8px;   
+    }
+    i{
+        margin-right:6px;
+        font-size: 10px;
+    }
+    #text-holder-pink-half{
+        position: relative;
+    }   
+}
